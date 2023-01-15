@@ -1,0 +1,26 @@
+
+--demo python flask--
+from flask import Flask, render_template
+# Create flask instance
+app=Flask("__name__")
+# Create a decorator initial 
+@app.route("/")
+def welcome():
+    return "<h1>Welcome to flask tutorial</h1>"
+
+# Create a decorator hello
+@app.route("/hello")
+def hello_world():
+    return "<h1>hello World</h1>"
+
+if(__name__=="__main__"):
+    app.debug=True
+    app.run()
+
+--set virtual environment--
+python3 -m venv </path of file>
+
+--set environment variables--
+$ export FLASK_DEBUG=true
+$ export FLASK_APP=app.py
+

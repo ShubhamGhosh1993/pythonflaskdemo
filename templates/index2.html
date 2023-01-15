@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome</title>
+</head>
+
+<body>
+	<h1>Let's start</h1>
+	<h2>{{user_name}}</h2>
+	<h2>Age : {{age}}</h2>
+	<h2>Here is variable passes : {{value}}</h2>
+	<ul>Please select</ul>
+	<ul>
+		{% for items in menu %}
+		{% if items is string %}
+		<li>
+			{{items}}
+		</li>
+		{%endif%}
+		{%endfor%}
+		<li>{{menu.0}}</li>
+		<li>{{menu.4}}</li>
+	</ul>
+</body>
+
+</html>
